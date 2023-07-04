@@ -96,7 +96,7 @@
             
             @foreach($events as $event)
             
-            <div class="bg-tranparent border border-gray-500 p-3 ">
+            <div class="bg-gray-50 border border-gray-500 p-3 ">
               <div class="flex">
                 <img
                   class="hidden w-48 mr-6 md:block object-cover"

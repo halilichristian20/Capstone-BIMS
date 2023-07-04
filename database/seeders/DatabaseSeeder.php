@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
         // ]);
         // Resident::factory(2)->create();
         // Official::factory(5)->create();
-        User::factory(5)->create();
-        Event::factory(5)->create();
+        User::factory(50)->create();
+        // Event::factory(5)->create();
     }
 }

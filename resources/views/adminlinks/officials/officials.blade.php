@@ -4,7 +4,7 @@
 
 <div class="flex w-full justify-between mb-4">
   <h1 class="text-3xl pb-4">Officials</h1>
-  <a href="/officialCreate">
+  
 </div>
 <hr class="pb-4 border-gray-200 sm:mx-auto dark:border-gray-700" />
       <div class="flex flex-row justify-center py-4 flex-wrap">

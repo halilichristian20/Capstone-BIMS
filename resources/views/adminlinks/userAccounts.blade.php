@@ -21,7 +21,7 @@
               Email
             </th>
             <th scope="col" class="px-6 py-3">
-              Gender
+              Role
             </th>
             <th scope="col" class="px-6 py-3">
               Action
@@ -29,21 +29,21 @@
           </tr>
         </thead>
         <tbody>
-@unless(count($users) == 0)
-@foreach($users->sortByDesc('created_at') as $user)
+@unless(count($residents) == 0)
+@foreach($residents->sortByDesc('created_at') as $resident)
           <tr class="bg-white border-b dark:bg-gray-900 dark:border-gray-700 text-center">
             {{-- <th
               scope="row"
               class="py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white
               hover:text-blue-600 hover:underline"
             >asdasd asdasd</th> --}}
-            <td class="py-4">{{$user->resident->userRole}}</td>
-          <td class="py-4">{{$user->resident->firstName}} {{$user->resident->lastName}}</td>
-          <td class="px-8 py-4">{{$user->email}}</td>
-          <td class="px-8 py-4">{{$user->resident->gender}}</td>
+            <td class="py-4">{{$resident->userLevel}}</td>
+          <td class="py-4">{{$resident->firstName}} {{$resident->lastName}}</td>
+          <td class="px-8 py-4">{{$resident->email}}</td>
+          <td class="px-8 py-4">{{$resident->userRole}}</td>
           <td class="py-4">
             <a
-              href="/dashboard/residents/{{$user->resident->residentId}}"
+              href="/dashboard/residents/{{$resident->residentId}}"
               class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
             >
               View Record
@@ -77,7 +77,7 @@
     </div>
   </section>
   <div class="mt-6 p-4">
-    {{$users->links()}}
+    {{$residents->links()}}
 </div>
 
 @endsection

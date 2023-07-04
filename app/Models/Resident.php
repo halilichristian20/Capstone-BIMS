@@ -20,6 +20,7 @@ class Resident extends Model
                 ->orWhere("firstName", "like", "%" . request("search") . "%" )
                 ->orWhere("middleName", "like", "%" . request("search") . "%" )
                 ->orWhere("status", "like", "%" . request("search") . "%" )
+                ->orWhere("userLevel", "like", "%" . request("search") . "%" )
                 ->orWhere("created_at", "like", "%" . request("search") . "%" );
               // Check if the search term is "senior" or "nonSenior"
               if (strtolower(request('search')) === 'senior') {

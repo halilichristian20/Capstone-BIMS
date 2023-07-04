@@ -63,6 +63,12 @@
     <section class="">
         <h1 class="text-center text-4xl py-4 my-4">EVENT</h1>
 
+        <a
+        href="/events"
+        class="inline-block text-center mx-auto text-black mb-4"
+        ><i class="fa-solid fa-arrow-left"></i> Back
+      </a>
+
         {{-- <form action="/events" >
             <div class="max-w-screen-xl relative mx-auto border-2 border-gray-100 m-4 rounded-lg">
               <div class="absolute top-4 left-3">
@@ -128,12 +134,12 @@
                 There are no upcoming events at this time.
             </h3>
             </div>
-            @endunless
+            @endunless--}}
             </div>
-            
+{{--             
             <div class="mt-6 p-4">
                 {{$events->links()}}
-            </div> --}}
+            </div>  --}}
             <div class="flex flex-col items-center justify-center text-center p-5">
                 <img
                   class="w-1/2 mr-6 mb-6"

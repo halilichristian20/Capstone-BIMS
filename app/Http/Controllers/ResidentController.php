@@ -313,7 +313,7 @@ class ResidentController extends Controller
             }
         }
 
-        return back()->withErrors(["email" => "Invalid Credentials"]);
+        return back()->withErrors(["email" => "Invalid Credentials"])->onlyInput('email');
     }
 
 
