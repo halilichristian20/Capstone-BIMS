@@ -230,21 +230,21 @@ class ResidentController extends Controller
         ]);
 
         // Check if the gender is being changed, and update the male/female counts accordingly
-        if ($residentId->gender !== $formFields['gender']) {
-            $residentCount = ResidentCount::firstOrNew([]);
-            if ($residentId->gender === 'Male') {
-                $residentCount->male_count--;
-            } elseif ($residentId->gender === 'Female') {
-                $residentCount->female_count--;
-            }
+        // if ($residentId->gender !== $formFields['gender']) {
+        //     $residentCount = ResidentCount::firstOrNew([]);
+        //     if ($residentId->gender === 'Male') {
+        //         $residentCount->male_count--;
+        //     } elseif ($residentId->gender === 'Female') {
+        //         $residentCount->female_count--;
+        //     }
 
-            if ($formFields['gender'] === 'Male') {
-                $residentCount->male_count++;
-            } elseif ($formFields['gender'] === 'Female') {
-                $residentCount->female_count++;
-            }
-            $residentCount->save();
-        }
+        //     if ($formFields['gender'] === 'Male') {
+        //         $residentCount->male_count++;
+        //     } elseif ($formFields['gender'] === 'Female') {
+        //         $residentCount->female_count++;
+        //     }
+        //     $residentCount->save();
+        // }
        
 
 
@@ -274,7 +274,8 @@ class ResidentController extends Controller
         Official::create($officialData);
         }
     }
-        return back();
+        // return back();
+        return redirect("/dashboard/residents")->with("message", "Account updated successfully!");
       }
 
       public function destroy(Resident $residentId, User $user) {

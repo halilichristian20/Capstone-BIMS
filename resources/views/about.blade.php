@@ -72,7 +72,7 @@
         <h1 class="pb-12 text-center text-5xl font-medium mx-auto">Your Barangay Officials</h1>
 
       <section class="pb-16" id="officials-about">
-        <div class="flex flex-wrap justify-center pb-6">
+        {{-- <div class="flex flex-wrap justify-center pb-6">
           <div class="ofcl max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <img class="rounded-t-lg max-h-min" src="{{asset("../images/capt.jpg")}}" alt="" />
           <div class="p-5">
@@ -80,15 +80,24 @@
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center">Barangay Chairman</p>
             </div>
           </div>
+        </div> --}}
+
+        <div class="ofcl max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto mb-6">
+          <img class="rounded-t-lg max-h-min" src="{{asset("../images/capt.jpg")}}" alt="" />
+        <div class="p-5">
+        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">Hon. Joseph Malundas </h5>
+        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center">Barangay Chairman</p>
+          </div>
         </div>
         
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-4 pb-6 mx-auto">
+          
         @foreach ($officials as $official)
-        <div class="flex flex-wrap justify-around pb-6">
-          <div class="ofcl max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-            <img class="rounded-t-lg max-h-min" src="{{asset("../images/sec.jpg")}}" alt="" />
+          <div class="ofcl max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
+            <img class="rounded-t-lg max-h-min" src="{{asset("../images/capt.jpg")}}" alt="" />
           <div class="p-5">
-          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">{{$official->firstName}}</h5>
-          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center">Barangay Kagawad</p>
+          <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white text-center">{{$official->firstName}} {{$official->lastName}} </h5>
+          <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center">{{$official->position}}</p>
             </div>
           </div>
           {{-- <div class="ofcl max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
@@ -105,8 +114,8 @@
           <p class="mb-3 font-normal text-gray-700 dark:text-gray-400 text-center">Barangay Kagawad</p>
             </div>
           </div> --}}
+          @endforeach
         </div>
-        @endforeach
         {{-- <div class="flex flex-wrap justify-around pb-6">
           <div class="ofcl max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
             <img class="rounded-t-lg max-h-min" src="{{asset("../images/k3.jpg")}}" alt="" />

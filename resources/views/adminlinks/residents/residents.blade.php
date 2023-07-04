@@ -94,7 +94,7 @@
             <p class="
                 @if($resident->status === 'Approved')
                     bg-green-500
-                @elseif($resident->status === 'Denied')
+                @elseif($resident->status === 'Deny')
                     bg-red-500
                 @elseif($resident->status === 'Pending')
                     bg-gray-500
